@@ -1,0 +1,20 @@
+{
+	"name": "ste-vue-inset-loader",
+	"version": "1.2.6",
+	"description": "在sfc模板指定位置插入自定义内容 修复 compiler.script.content 这段代码有时候会报错的问题",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1977474741/vue-inset-loader.git"
+	},
+	"publishConfig": {
+		"registry": "http://172.16.109.59:8010/repository/npm-hosted/"
+	},
+	"author": "鹅鹅鹅 <1977474741@qq.com>",
+	"license": "ISC",
+	"dependencies": {
+		"vue-template-compiler": "^2.6.10",
+		"strip-json-comments": "^2.0.1"
+	}
+}
