@@ -1,6 +1,6 @@
 {
     "name": "ste-vue-inset-loader",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "在sfc模板指定位置插入自定义内容 修复 compiler.script.content 这段代码有时候会报错的问题",
     "main": "index.js",
     "scripts": {},

@@ -11,22 +11,18 @@
 
 ### 第二步 vue.config.js注入loader
 
-    module: {
-        rules: [
-          {
-            test: /\.vue$/,
-            use:{
-                loader: "ste-vue-inset-loader"
-                // // 针对Hbuilder工具创建的uni-app项目
-                // loader: path.resolve(__dirname,"./node_modules/ste-vue-inset-loader")
-            }
-          }
-        ]
+const path = require('path');
+module.exports = {
+    chainWebpack: (config) => {
+        config.module
+            .rule('vue')
+            .test(/\.vue$/)
+            .use()
+            .loader(path.resolve(__dirname, './node_modules/ste-vue-inset-loader'))
+            .end();
     },
-    // 支持自定义pages.json文件路径
-    // options: {
-    //     pagesPath: path.resolve(__dirname,'./src/pages.json')
-    // }
+};
+
 
 ### 第三步 pages.json配置文件中添加insetLoader
 
@@ -36,8 +32,8 @@
             "abc": "<BaseAbc ref='BaseAbc'></BaseAbc>"
         },
         // 全局配置
-        "label":["confirm"],
-        "rootEle":"div"
+        "label":["confirm","abc"],
+        "rootEle":".*"
     },
     "pages": [
         {
