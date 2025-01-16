@@ -6,11 +6,11 @@
 2. 修复了获取不到页面内容就报错的问题。
 
 ### 第一步 安装
-
+```
     npm install ste-vue-inset-loader --save-dev
-
+```
 ### 第二步 vue.config.js注入loader
-
+```
 const path = require('path');
 module.exports = {
     chainWebpack: (config) => {
@@ -22,10 +22,10 @@ module.exports = {
             .end();
     },
 };
-
+```
 
 ### 第三步 pages.json配置文件中添加insetLoader
-
+```
     "insetLoader": {
         "config":{
             "confirm": "<BaseConfirm ref='confirm'></BaseConfirm>",
@@ -46,7 +46,7 @@ module.exports = {
             }
         },
     ]
-
+```
 ###  配置说明
 
  - `config` (default: `{}`)
